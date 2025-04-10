@@ -1,0 +1,4 @@
+react_app_name: your-react-app-name
+firebase_project_name: your-firebase-project-name # match actual firebase project name
+web_app_name: Your Web App Name
+web_app_description: Your Web App Description

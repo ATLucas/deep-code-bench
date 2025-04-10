@@ -45,3 +45,10 @@ Always do this in the repo root before running any python scripts.
 - `cd projects/your_project/app`
 - `firebase login` (if not already logged-in)
 - `firebase deploy`
+
+# Edit the App
+
+## Editing the Favicon
+
+To change an app's favicon, replace the PNG in `projects/your_project/app/public`.
+If the file name changed, update `index.html` and `manifest.json` accordingly (same directory).

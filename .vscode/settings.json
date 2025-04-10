@@ -1,0 +1,13 @@
+{
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.py$",
+                "cmd": "black ${file}"
+            }
+        ]
+    },
+    "python.analysis.extraPaths": [
+        "/Users/andrewlucas/dev/deep-code-bench/framework/src"
+    ]
+}

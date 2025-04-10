@@ -1,0 +1,4 @@
+react_app_name: deep-code-bench
+firebase_project_name: deep-code-benchmark # as defined in firebase
+web_app_name: Deep Code Benchmark
+web_app_description: Deep Comprehension, Long Context Coding Benchmark

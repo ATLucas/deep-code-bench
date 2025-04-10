@@ -2,19 +2,14 @@
 import asyncio
 import shutil
 import argparse
-import os
 
 # DCB
-from dcb.common.constants import ROOT_DIR
-from dcb.common.validation import is_valid_project_dir
-from dcb.init.init_app import init_app
+from dcb.init_project.init_config import init_project_config
 
 
 async def main():
     # Set up argument parser
-    parser = argparse.ArgumentParser(
-        description="Initialize a Firebase React app in the given directory"
-    )
+    parser = argparse.ArgumentParser(description="Initialize a DCB project directory")
     parser.add_argument(
         "-p",
         "--project-dir",
@@ -24,14 +19,7 @@ async def main():
     )
     args = parser.parse_args()
 
-    project_dir = os.path.abspath(os.path.join(ROOT_DIR, args.project_dir))
-
-    if not is_valid_project_dir(project_dir):
-        raise ValueError(
-            f"Project directory {project_dir} is not a valid DCB project directory"
-        )
-
-    await init_app(project_dir)
+    await init_project_config(args.project_dir)
 
 
 if __name__ == "__main__":

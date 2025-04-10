@@ -18,20 +18,20 @@ Always do this in the repo root before running any python scripts.
 
 # Project Setup
 
-## Project directory
+## Init Project Config
 
-`python framework/scripts/init_project_dir.py --project-dir projects/your_project`
+`python framework/scripts/init_project_config.py --project-dir projects/your_project`
 
-## Project config
+## Edit Project Config
 
 - Edit the settings in `projects/your_project/config/settings.yaml`
 - Create project in firebase and add a web app. If you don't know how to do this, ask ChatGPT.
 - Get your firebase credentials from the firebase console (Project Settings -> General -> Scroll Down)
 - Edit the firebase credentials in `projects/your_project/config/firebase_credentials.yaml`
 
-## Project init
+## Init Project App
 
-- `python framework/scripts/init_firebase_react_app.py --project-dir projects/your_project`
+- `python framework/scripts/init_project_app.py --project-dir projects/your_project`
 - `cd projects/your_project/app`
 - `npm install`
 

@@ -7,7 +7,7 @@ from dcb.common.config import parse_config
 from dcb.common.constants import TEMPLATE_DIR
 
 
-async def init_firebase_react_app(project_dir: str):
+async def init_app(project_dir: str):
     """Initialize a Firebase React app in the given directory.
 
     Args:

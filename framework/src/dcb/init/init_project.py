@@ -6,7 +6,7 @@ import shutil
 from dcb.common.constants import TEMPLATE_DIR
 
 
-async def init_project_dir(project_dir: str):
+async def init_project(project_dir: str):
     """Initialize a DCB project directory.
 
     Args:

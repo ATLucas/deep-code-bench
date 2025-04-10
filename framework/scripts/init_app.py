@@ -5,7 +5,9 @@ import argparse
 import os
 
 # DCB
-from dcb.init.init_firebase_react_app import init_firebase_react_app
+from dcb.common.constants import ROOT_DIR
+from dcb.common.validation import is_valid_project_dir
+from dcb.init.init_app import init_app
 
 
 async def main():
@@ -22,17 +24,14 @@ async def main():
     )
     args = parser.parse_args()
 
-    # Check if the project directory exists
-    if not os.path.exists(args.project_dir):
-        raise FileNotFoundError(f"Project directory {args.project_dir} does not exist")
+    project_dir = os.path.abspath(os.path.join(ROOT_DIR, args.project_dir))
 
-    # Check if the project directory is a DCB project directory
-    if not os.path.exists(os.path.join(args.project_dir, "config", "settings.yaml")):
-        raise FileNotFoundError(
-            f"Project directory {args.project_dir} is not a DCB project directory"
+    if not is_valid_project_dir(project_dir):
+        raise ValueError(
+            f"Project directory {project_dir} is not a valid DCB project directory"
         )
 
-    await init_firebase_react_app(args.project_dir)
+    await init_app(project_dir)
 
 
 if __name__ == "__main__":

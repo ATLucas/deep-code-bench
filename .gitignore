@@ -175,4 +175,5 @@ cython_debug/
 
 tests
 
+todo.txt
 firebase_credentials.yaml

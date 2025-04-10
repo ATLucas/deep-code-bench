@@ -12,9 +12,9 @@ Each instructions section below will assume you are starting in the repo root.
 
 # Activate the Environment
 
-`source venv/bin/activate`
+Always do this in the repo root before running any python scripts:
 
-Always do this in the repo root before running any python scripts.
+`source venv/bin/activate`
 
 # Project Setup
 

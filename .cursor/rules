@@ -1,0 +1,27 @@
+# Style Requirements
+
+- React JSX
+    - Use functional React components and hooks
+    - Do not use Typescript
+    - Use Chakra UI components, where available, including Boxes, HStacks, and VStacks for layout
+    - Layout preference: when reasonable, children should fill their container, typically a Box filled 100% or HStack/VStack filled at the end via flex=1 
+    - Use Fi icons, when available
+    - Comply with default ESLint config
+    - Use useCallback for all multi-line callback functions that have dependencies
+    - Use template literals for all string interpolation
+    - Separate each JSX component function implement into the following sections:
+        - Hooks
+        - Callbacks
+        - Effects
+        - Render
+    - Start each section with a single-line, full-width divider comment:
+      ```jsx
+      /* ------------------------------ Hooks ------------------------------ */
+      ```
+    - Omit any sections not needed
+    - Group imports under these categories: "// React", "// Redux", "// Firebase", "// Chakra", "// MdM"
+    - Keep imports in alphabetical order within each import group
+- Python
+    - Comply with default black formatting guidelines
+    - Use f-strings for string interpolation
+    - Use type hints

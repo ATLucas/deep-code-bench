@@ -1,23 +1,20 @@
 import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Simple Counter</h1>
+        <p>Count: {count}</p>
+        <button onClick={() => setCount(count + 1)}>
+          Increment
+        </button>
       </header>
     </div>
   );
-}
+};
 
 export default App;
